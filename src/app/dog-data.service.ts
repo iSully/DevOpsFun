@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import {Observable} from "rxjs";
 
 export interface Dog {
   name: string;
@@ -13,7 +14,8 @@ export interface Dog {
   providedIn: 'root'
 })
 export class DogDataService {
-  dogs: Dog[] = [
+
+  public dogs: Dog[] = [
     {
       name: 'Buddy',
       ownerName: 'John Doe',
@@ -55,5 +57,6 @@ export class DogDataService {
       location: 'Phoenix, AZ'
     }
   ];
+
 
 }
